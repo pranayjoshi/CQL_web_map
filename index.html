@@ -1,0 +1,20 @@
+<html>
+<body>
+
+<p>Type the name of any Indian State</p>
+
+<head>
+   <form>
+     <textarea id="name"></textarea>
+     <input type="button" value="OK" onclick="myFunction();"></input>
+   </form>
+   <img src="http://localhost:8080/geoserver/wms/reflect?layers=pranay:IND_pj&width=400"/>
+<script>
+function myFunction() {
+  var input = document.getElementById("name").value;
+  window.open("http://localhost:8080/geoserver/wms/reflect?format=application/openlayers&layers=pranay:IND_pj&CQL_FILTER=NAME_1+IN+(%27"+input+"%27)");
+}
+</script>
+
+</body>
+</html>
