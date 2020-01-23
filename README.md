@@ -65,9 +65,11 @@ They Display the image set to display the feature for ``` pranay:IND_pj ```
 ### (REFRENCE: WMS(std) = WMS Standard, WMS(ref) = WMS Reflector)
 ### WMS Reflector 
 WMS(ref) = (pros) small and simple code .With ease understand
+
 WMS(ref) = (cons) as it is only used to preview, so only one layer can be shown i.e you may not show multiple layers and even base layer also can't be added
 ### WMS Standard
 WMS(std) = (pros) you may add many layers and functionality
+
 WMS(std) = (cons it is time consume and the code needs to be long and elongated
 
 # Code Explaination
