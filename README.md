@@ -8,20 +8,25 @@ The main motive of this program was to make the program as readable, easy and sh
 # Geoserver
 * download geoserver (you may download it any way you like), from the official link or from this [link](https://drive.google.com/file/d/1PkcyuIdH2vNFGb9rx1GofMHTDDhvzOx_/view?usp=sharing)(this is the custom setup made by me.
 * Than, when you will install leave the default settings as it is. 
+![s](https://github.com/pranayteaches/openlayer_wms_map/blob/master/process/Installation.PNG)
 * after the installation go to the search bar of your operating system and search for "start geoserver"., if it is there click on it and your server will be started. Else, try reinstalling itand repeat the process mentioned.
 * open your browser and type http://localhost:8080/geoserver/web/ a webportal of geo server will apear.
-* Just login using    username:- admin     passward:- geoserver
+* Just login using    username:- admin     password:- geoserver
 * a welcome screen of geoserver will open.
+![asd](https://github.com/pranayteaches/openlayer_wms_map/blob/master/process/login.PNG)
 * click on the "workspace" in the left corner and "add a new workspace" by giving it a name and any url(not needs to be real). fr ex: pranay
 * after creating click on the "stores" above the "workspace" in the data panel(left side). and add a new shape file(first option).
+![a](https://github.com/pranayteaches/openlayer_wms_map/blob/master/process/3.jpg)
 * download any shape file like a file. For ex. indian states.
 * in "stores" in the workspace choose the workspace you created.
 * below give any name to it, you may leave the description empty.
 * at last browse the directry of shapefiles, for ex ``` D:\india```, and than click on save.
 * after click on the "layers" above "stores". than add new layer. than choose the name of shapefile you uploaded in add layers from.
+![ds](https://github.com/pranayteaches/openlayer_wms_map/blob/master/process/stores.PNG)
 * than click on publish.
 * first of all give a name to your layer and than title, leave the other things as it is and than scroll down to "Bounding Boxes".
 * After that you just need to click on "compute from data", for the "native bounding box" and than below for "lat/long bounding box", click on "compute from native bounds".
+![asd](https://github.com/pranayteaches/openlayer_wms_map/blob/master/process/layers.PNG)
 * than click on save, congratulations your WMS layer has been created.
 # Open Layers
 * download node.js and install openlayers by:-
@@ -31,17 +36,39 @@ The main motive of this program was to make the program as readable, easy and sh
 * create a new html file.
 * and just copy and paste the code I mentioned.
 * congratulations you are all set.
-# how to use the code
+# How to use the code?
 * First you have to start your geoserver.
 * Then you may just open the html file in the chrome or start it using VsCode.
 * If you wnat to use it directly just copy and paste the link below.
  http://localhost:8080/geoserver/wms/reflect?format=application/openlayers&layers=pranay:IND_pj&CQL_FILTER=NAME_1+IN+(%27Uttaranchal%27)
-# why use my code
+# Why use my code?
 As, it is very simple and updated, and also very small, which saves time.
-# how is it so Small while other codes of same are verybig.
+# How is it so Small while other codes of same are verybig?
 First of all every things not worked for me right, it took me 2 days to research about open layers and geoserver but nothing works for me. Then suddenly when I was just reading Geoserver's 2.17.x documentation I came to know about a new feature." WMS Reflector".
 # WMS Reflector
 What WMS reflector do is it creates an open layer's layer or just make its image file.
+WMS reflector has a great advantage in some occasions., as Standard WMS requests can be quite long and verbose. Typing into a browser, or HTML editor, can be quite cumbersome and error prone. The WMS Reflector solves this problem nicely by using good default values for the options that you do not specify.
+For instance the following, which returns an OpenLayers application with an 800x600 image set to display the feature for ```
+Russia:Asia_Russia ```
+```
+<!DOCTYPE html>
+<html lang="en">
+    <a href="http://localhost:8080/geoserver/wms/reflect?format=application/openlayers&layers=pranay:IND_pj">
+      <img src="http://localhost:8080/geoserver/wms/reflect?layers=pranay:IND_pj&width=400"/>
+      </a>
+ </html>
+ ```
+# Code Difference(WMS(Reflector) VS WMS(Standard)) 
+Here I will just provide you the code with the same function but one with (WMS(Reflector)) and one with (WMS(Standard)) 
+They Display the image set to display the feature for ``` pranay:IND_pj ```
+(NOTE: Both code are made in a contribution to OSGeo)
+### (REFRENCE: WMS(std) = WMS Standard, WMS(ref) = WMS Reflector)
+### WMS Reflector 
+WMS(ref) = (pros) small and simple code .With ease understand
+WMS(ref) = (cons) as it is only used to preview, so only one layer can be shown i.e you may not show multiple layers and even base layer also can't be added
+### WMS Standard
+WMS(std) = (pros) you may add many layers and functionality
+WMS(std) = (cons it is time consume and the code needs to be long and elongated
 
 # Code Explaination
 * First of all i described that it is a HTML file.
