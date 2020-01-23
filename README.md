@@ -119,7 +119,7 @@ function myFunction() {
 for ex:- ```  <img src="http://localhost:8080/geoserver/wms/reflect?layers=pranay:IND_pj&width=400"height="169" width="400"/> ```
 # Comparision
 ### Image Before Filter
-![sa](https://github.com/pranayteaches/CQL_web_map/blob/master/CL_FILTER/Entering_state_name.PNG)
+![sa](https://github.com/pranayteaches/CQL_web_map/blob/master/CL_FILTER/ad.PNG)
 
 ### Image after Filter
 ![ad](https://github.com/pranayteaches/CQL_web_map/blob/master/CL_FILTER/image.png)
